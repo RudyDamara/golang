@@ -1,4 +1,5 @@
-# Pretest Priviid
+# Golang
+
 
 # wiki 
 1. JWT authentication valid token (24 H)
