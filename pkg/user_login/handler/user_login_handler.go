@@ -6,10 +6,10 @@ import (
 )
 
 type HTTPHandler struct {
-	model model.UserBalanceModel
+	model model.UserLoginModel
 }
 
-func NewHTTPHandler(model model.UserBalanceModel) *HTTPHandler {
+func NewHTTPHandler(model model.UserLoginModel) *HTTPHandler {
 	return &HTTPHandler{model: model}
 }
 

@@ -8,17 +8,17 @@ import (
 	"github.com/RudyDamara/golang/pkg/user_login/structs"
 )
 
-type userBalanceModel struct {
+type userLoginModel struct {
 	dbConn *db.DbConnection
 }
 
-func NewUserBalanceModel(dbConn *db.DbConnection) UserBalanceModel {
-	return &userBalanceModel{dbConn: dbConn}
+func NewUserLoginModel(dbConn *db.DbConnection) UserLoginModel {
+	return &userLoginModel{dbConn: dbConn}
 }
 
 var ErrRecordNotFound = errors.New("record not found")
 
-func (r *userBalanceModel) Logout(param structs.User) chan models.Result {
+func (r *userLoginModel) Logout(param structs.User) chan models.Result {
 	output := make(chan models.Result)
 	var users structs.User
 

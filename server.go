@@ -16,8 +16,8 @@ import (
 	userHandler "github.com/RudyDamara/golang/pkg/user/handler"
 	userModel "github.com/RudyDamara/golang/pkg/user/model"
 
-	userBalanceHandler "github.com/RudyDamara/golang/pkg/user_login/handler"
-	userBalanceModel "github.com/RudyDamara/golang/pkg/user_login/model"
+	userLoginHandler "github.com/RudyDamara/golang/pkg/user_login/handler"
+	userLoginModel "github.com/RudyDamara/golang/pkg/user_login/model"
 )
 
 func main() {
@@ -51,8 +51,8 @@ func main() {
 	userModel := userModel.NewUserModel(dbConn)
 	userHandler.NewHTTPHandler(userModel).Mount(apiV1)
 
-	userBalanceModel := userBalanceModel.NewUserBalanceModel(dbConn)
-	userBalanceHandler.NewHTTPHandler(userBalanceModel).Mount(apiV1, authMiddleware)
+	userLoginModel := userLoginModel.NewUserLoginModel(dbConn)
+	userLoginHandler.NewHTTPHandler(userLoginModel).Mount(apiV1, authMiddleware)
 
 	err := r.Start(":" + os.Getenv("PORT"))
 	if err != nil {
