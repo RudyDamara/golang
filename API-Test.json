@@ -1,0 +1,79 @@
+{
+	"info": {
+		"_postman_id": "06870daf-dca7-4324-a2dd-749dc639fc87",
+		"name": "PreTestPriviID",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\": \"rudy\", \n\t\"password\":\"1234567\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5002/api/login",
+					"host": [
+						"localhost"
+					],
+					"port": "5002",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MTE1NjM3MTUsImlhdCI6MTYxMTQ3NzMxNSwidXNlciI6eyJpZCI6MSwidXNlcm5hbWUiOiJydWR5IiwiZW1haWwiOiJydWR5ZGFtYXJhQGdtYWlsLmNvbSIsImlzbG9naW4iOnRydWV9fQ.QbeDadXmY5QT4ArrKA9NPRk4A8k1GRFHqupL1eBM3EbiBoyrtKNMr72i-l1tM3Ih3SKls1ZPhAPyV__m158yNKxKH0KqcIbDXNjZCvy2ahiMUPRVovPjgktUpzpWGscSAth3b097naywLlZMtqXSoVB3DeLA1ZDFiwIBWL9VHoQVdzvM1PIrs6bxeeysOyZude0vLICTo-0B9QpKmJGHdDvmfRTa_KlBlRpwXq5PxaxQzAs3gIpyUU4L4W6-IEdYHn4TxFYG-zMuLwlUH8LyJ-KHDnNPXlW96K_vgqU5IS5A08EsxOreIPSRBxoVoM7JPavM0-dKrDJ8yhYLA6HSd4xT3vi7z2iefrjVZU9Fc3C5yYCNnHpXJfSy7V-tRWyfaRnTxIDtBrS9YsVU6TyhXxsDujkk0lCzQbQ3T-Lb7DSe88wNAko4C3XhPJaf3rms75mb_j480uCwRUOuaplMvCYxS730OUxXmYle5iWq8QZE7xEe3d46OQkc-YRFeoME85ww8q67L2JoX2ywI8ViS7GUENe1KvRNNGDNbelj2fslkJHst6P5wkMAMeF779jNbNJVAmrBpLdlaOxW0Q_AR6zYPcfx-4PH7zUVls-Pv2jC-Ba025Yq3eBnMOGqUd5GVxtXiM1JM1xfLi3H5cuYVkDzf6hi9tTTo27t9sPzdkg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5002/api/logout",
+					"host": [
+						"localhost"
+					],
+					"port": "5002",
+					"path": [
+						"api",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
