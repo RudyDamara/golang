@@ -18,8 +18,9 @@
 
 # prepare running program
 1. create database, import table
-2. create file .env dan sesuaikan dengan .env.example
-3. API collection terdapat pada file API-Test.json 
+2. create rsa key in /certificate
+3. create file .env dan sesuaikan dengan .env.example
+4. API collection terdapat pada file API-Test.json 
 
 # running program
 1. go mod vendor
